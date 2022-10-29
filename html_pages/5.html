@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+
+    <html>
+
+    <head>
+
+      <title>How can you prove that the square root of two is irrational?</title>
+
+    	<link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=079c5e1603be" >
+    	<link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Sites/math/primary.css?v=11647af315cf" >
+
+            <script type="text/x-mathjax-config">
+                MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+                    tex2jax: { inlineMath: [ ["$", "$"], ["\\\\(","\\\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+                    TeX: {
+                        extensions: ["begingroup.js"],
+                        noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, 
+                        Macros: { href: "{}" } 
+                    },
+                    messageStyle: "none",
+                    
+                    styles: { ".MathJax_Display, .MathJax_Preview, .MathJax_Preview > *": { "background": "inherit" } },
+                    SEEditor: "mathjaxEditing"
+            });
+            </script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML-full"></script>
+			
+			
+<style>
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+}
+</style>
+
+			
+    </head>
+        <body class="question-page unified-theme">
+        <header class="site-header">
+            <div class="site-header--container">
+
+
+                <img  class="center" style="width: 200px; height: 50px" src="../../arqmath.png" alt="ARQMATH LAB">
+
+            </div>
+			            <div class="site-header--container">
+
+
+   				<img  class="center" style="width: 200px; height: 50px" src="../../mse.svg" alt="Math Stack Exchange">
+				
+				</div>
+        </header>
+        <div class="container">
+
+
+        <div id="content" class="">
+
+
+            
+
+
+        <div itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
+    
+    			<div class="inner-content clearfix">
+
+           		<div id="question-header" class="grid sm:fd-column">
+<div class="grid fw-wrap pb8 mb16 bb bc-black-2">
+          			<h1 itemprop="name" class="grid--cell fs-headline1 fl1 ow-break-word mb8">How can you prove that the square root of two is irrational?</h1></div>
+            	</div>
+               <div id="mainbar" role="main" aria-label="question and answers">
+
+                
+
+<div class="question" data-questionid="5"  id="question">
+
+<div class="post-layout">
+        	<div class="votecell post-layout--left">
+            
+
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="5">  
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="54">54</div>
+</div>
+</div>
+
+        
+
+
+<div class="postcell post-layout--right">
+    <span class="d-none">$\begingroup$</span>
+    <div class="post-text" itemprop="text">
+		<p>I have read a few proofs that <span class="math-container" id="39">$\sqrt{2}$</span> is irrational.</p>  <p>I have never, however, been able to really grasp what they were talking about.</p>  <p>Is there a simplified proof that <span class="math-container" id="40">$\sqrt{2}$</span> is irrational?</p> 
+
+    </div>
+
+        <div class="post-taglist grid gs4 gsy fd-column">
+            <div class="grid ps-relative d-block">
+              <span class="post-tag" rel="tag">elementary-number-theory</span>
+<span class="post-tag" rel="tag">proof-writing</span>
+<span class="post-tag" rel="tag">radicals</span>
+<span class="post-tag" rel="tag">rationality-testing</span>
+ 
+            </div>
+        </div>
+
+    <div class="mb0 ">
+        <div class="mt16 grid gs8 gsy fw-wrap jc-end ai-start pt4">
+      
+<div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2010-07-20">2010-07-20</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:38</span><div class="-flair">
+<span class="reputation-score" dir="ltr">2k</span><br> </div>
+<span" aria-hidden="true"><span class="badge1"> </span><span class="badgecount">4</span></span><span class="v-visible-sr">4gold badges</span>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">18</span></span><span class="v-visible-sr">18silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">23</span></span><span class="v-visible-sr">23bronze badges</span>
+</div>
+</div></div>
+
+
+            </div>
+        </div>
+
+</div>
+   
+</div>
+        <div class="post-layout--right">
+<div id="comments-5" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="5">
+<ul class="comments-list js-comments-list">
+<li id="comment-4731036" class="comment js-comment " data-comment-id="4731036">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">0</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">or...suppose <span class="math-container" id="45">$\gcd(a,b) = 1$</span>, and <span class="math-container" id="46">$\sqrt{n}= \frac{a}{b}$</span> for integers <span class="math-container" id="47">$a$</span> and <span class="math-container" id="48">$b$</span>. then <span class="math-container" id="49">$a^2 = b^2n$</span>. Since <span class="math-container" id="50">$b^2$</span> divides <span class="math-container" id="51">$b^2n$</span>, it must be the case that <span class="math-container" id="52">$b^2|a^2$</span>. If <span class="math-container" id="53">$p$</span> is a prime that divides <span class="math-container" id="54">$b$</span> then <span class="math-container" id="55">$p$</span> divides <span class="math-container" id="56">$a^2$</span> hence <span class="math-container" id="57">$p|a$</span> contradicting <span class="math-container" id="58">$\gcd(a,b) = 1$</span>. Thus, there can be no such prime that divides <span class="math-container" id="59">$b$</span>, so <span class="math-container" id="60">$b = -1$</span> or <span class="math-container" id="61">$b = 1$</span>, that is, <span class="math-container" id="62">$\frac{a}{b}$</span> is an integer (comment moved here by request).</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2017-05-28</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+
+   
+</div>
+
+
+
+<div id="answers">
+                    
+                    <div id="answers-header">
+                        <div class="subheader answers-subheader">
+                            <h2 data-answercount="14">
+                                    14 Answers
+                                <span style="display:none;">14</span>
+                            </h2>
+         
+                        </div>
+                    </div>
+
+
+
+
+<div id="answer-7" class="answer accepted-answer"data-answerid="7"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="7">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="80">80</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4 " aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>You use a proof by contradiction. Basically, you suppose that <span class="math-container" id="63">$\sqrt{2}$</span> can be written as <span class="math-container" id="64">$p/q$</span>. Then you know that <span class="math-container" id="65">$2q^2 = p^2$</span>. However, both <span class="math-container" id="66">$q^2$</span> and <span class="math-container" id="67">$p^2$</span> have an even number of factors of two, so <span class="math-container" id="68">$2q^2$</span> has an odd number of factors of 2, which means it can't be equal to <span class="math-container" id="69">$p^2$</span>.</p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2010-07-20">2010-07-20</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:45</span><div class="-flair">
+<span class="reputation-score" dir="ltr">3k</span><br> </div>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">21</span></span><span class="v-visible-sr">21silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">38</span></span><span class="v-visible-sr">38bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-7" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="7">
+<ul class="comments-list js-comments-list">
+<li id="comment-5667515" class="comment js-comment " data-comment-id="5667515">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">0</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">I love this proof. It's one very similar to a proof I thought of by myself that <span class="math-container" id="94">$\sqrt 2$</span> is irrational in elementary school.</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2018-04-21</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-16526" class="answer accepted-answer"data-answerid="16526"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="16526">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="32">32</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>Another method is to use continued fractions (which was used in one of the first proofs irrationality of <span class="math-container" id="95">$\displaystyle \pi$</span>).</p>  <p>Instead of <span class="math-container" id="96">$\displaystyle \sqrt{2}$</span>, we will consider <span class="math-container" id="97">$\displaystyle 1 + \sqrt{2}$</span>.</p>  <p>Now <span class="math-container" id="98">$\displaystyle v = 1 + \sqrt{2}$</span> satisfies</p>  <p><span class="math-container" id="99">$v^2 - 2v - 1 = 0$</span></p>  <p>i.e</p>  <p><span class="math-container" id="100">$v = 2 + \frac{1}{v}$</span></p>  <p>This leads us to the following continued fraction representation</p>  <p><span class="math-container" id="101">$1 + \sqrt{2} = 2 + \cfrac{1}{2 + \cfrac{1}{2 + \dots}}$</span></p>  <p>Any number with an infinite simple continued fraction is irrational and any number with a finite simple continued fraction is rational and has at most two such simple continued fraction representations.</p>  <p>Thus it follows that <span class="math-container" id="102">$\displaystyle 1 + \sqrt{2}$</span> is irrational, and so <span class="math-container" id="103">$\displaystyle \sqrt{2}$</span> is irrational.</p>  <p><strong>Exercise</strong>: Show that the Golden Ratio is irrational.</p>  <p>More information here: <a href="http://en.wikipedia.org/wiki/Continued_fraction">http://en.wikipedia.org/wiki/Continued_fraction</a></p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2011-01-06">2011-01-06</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:1102</span><div class="-flair">
+<span class="reputation-score" dir="ltr">71k</span><br> </div>
+<span" aria-hidden="true"><span class="badge1"> </span><span class="badgecount">6</span></span><span class="v-visible-sr">6gold badges</span>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">156</span></span><span class="v-visible-sr">156silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">246</span></span><span class="v-visible-sr">246bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-16526" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="16526">
+<ul class="comments-list js-comments-list">
+<li id="comment-5667522" class="comment js-comment " data-comment-id="5667522">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">0</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">The task was to write a proof that's easy for almost anyone to understand. Sophie Alpert's answer already does that and this one doesn't. Also, almost anyone would fine Sophie Alpert's answer satisfactory so this answer is not needed at all so I downvoted it.</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2018-04-21</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-2077" class="answer accepted-answer"data-answerid="2077"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="2077">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="24">24</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>If <span class="math-container" id="104">$\sqrt 2$</span> were rational, we could write it as a fraction <span class="math-container" id="105">$a/b$</span> in <strong>lowest terms</strong>. Then <span class="math-container" id="106">$a^2 = 2 b^2.$</span> Look at the last digit of <span class="math-container" id="107">$a^2$</span>. It has to be <span class="math-container" id="108">$0$</span>, <span class="math-container" id="109">$1$</span>, <span class="math-container" id="110">$4$</span>, <span class="math-container" id="111">$5$</span>, <span class="math-container" id="112">$6$</span> or <span class="math-container" id="113">$9$</span>. Now look at the last digit of <span class="math-container" id="114">$2b^2$</span>. It has to be <span class="math-container" id="115">$0$</span>, <span class="math-container" id="116">$2$</span> or <span class="math-container" id="117">$8$</span>. As <span class="math-container" id="118">$a^2$</span> and <span class="math-container" id="119">$2b^2$</span> are the same number, its last digit must be <span class="math-container" id="120">$0$</span>. But that's only possible if <span class="math-container" id="121">$a$</span> ends in <span class="math-container" id="122">$0$</span> and <span class="math-container" id="123">$b$</span> ends in <span class="math-container" id="124">$0$</span> or <span class="math-container" id="125">$5$</span>. Either way both <span class="math-container" id="126">$a$</span> and <span class="math-container" id="127">$b$</span> are multiples of <span class="math-container" id="128">$5$</span> contradicting <span class="math-container" id="129">$a/b$</span> being in lowest terms.</p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2010-08-10">2010-08-10</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:226</span><div class="-flair">
+<span class="reputation-score" dir="ltr">20k</span><br> </div>
+<span" aria-hidden="true"><span class="badge1"> </span><span class="badgecount">2</span></span><span class="v-visible-sr">2gold badges</span>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">44</span></span><span class="v-visible-sr">44silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">70</span></span><span class="v-visible-sr">70bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-2077" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="2077">
+<ul class="comments-list js-comments-list">
+<li id="comment-5667529" class="comment js-comment " data-comment-id="5667529">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">0</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">Everyone who finds this answer good enough would also find Sophie Alpert's answer good enough so this answer doesn't add anything to it so I'm not sure this answer is needed at all so I downvoted it.</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2018-04-21</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-16" class="answer accepted-answer"data-answerid="16"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="16">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="23">23</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>Consider this proof by contradiction:</p>  <p>Assume that <span class="math-container" id="150">$\sqrt{2}$</span> is rational. Then there exists some rational <span class="math-container" id="151">$R=\sqrt{2}=\frac{Q}{D}$</span>, where <span class="math-container" id="152">$Q$</span> and <span class="math-container" id="153">$D$</span> are positive integers and relatively prime (since <span class="math-container" id="154">$R$</span> can be expressed in simplified form).</p>  <p>Now consider <span class="math-container" id="155">$R^2 = 2 = \frac{Q^2}{D^2}$</span>. Since <span class="math-container" id="156">$Q$</span> and <span class="math-container" id="157">$D$</span> are relatively prime, this means that only <span class="math-container" id="158">$Q^2$</span> can have <span class="math-container" id="159">$2$</span> in its prime decomposition, and the exponent must be one. Thus, <span class="math-container" id="160">$Q^2 = 2^1 x$</span>, for some odd integer <span class="math-container" id="161">$x$</span>. But <span class="math-container" id="162">$Q^2$</span> is a square, and thus the exponents for all of its prime factors must be even. Here we have a contradiction.</p>  <p>Thus, <span class="math-container" id="163">$\sqrt{2}$</span> must be irrational.</p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2010-07-20">2010-07-20</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:48</span><div class="-flair">
+<span class="reputation-score" dir="ltr">553</span><br> </div>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">6</span></span><span class="v-visible-sr">6silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">10</span></span><span class="v-visible-sr">10bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-16" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="16">
+<ul class="comments-list js-comments-list">
+<li id="comment-303334" class="comment js-comment " data-comment-id="303334">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">1</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">If you are implicitly using *uniqueness* of prime factorizations then you need to *explicitly* state that, and state how it applies to yields your deduction. This is essential for proofs at this level.</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2012-04-14</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-16544" class="answer accepted-answer"data-answerid="16544"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="16544">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="19">19</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>The continued fraction proof in Aryabhata's answer can be recast into an elementary form that requires no knowledge of continued fractions. Below is a variant of such that John Conway (JHC) often mentions, followed by my (WGD) reinterpretation of it to highlight the key role played by the principality of (denominator) ideals in <span class="math-container" id="164">$\:\mathbb Z\:$</span> (which I call <strong>unique fractionization</strong>).</p>  <hr>  <p><strong>THEOREM (JHC)</strong> <span class="math-container" id="165">$\quad \rm r = \sqrt{n}\ \:$</span> is integral if rational,<span class="math-container" id="166">$\:$</span> for <span class="math-container" id="167">$\:\rm n\in\mathbb{N}$</span></p>  <p><strong>Proof</strong> <span class="math-container" id="168">$\ \ \ $</span>  Put <span class="math-container" id="169">$\ \ \displaystyle\rm r = \frac{A}B ,\;$</span> least <span class="math-container" id="170">$\rm\; B>0\:.\;$</span> <span class="math-container" id="171">$\  \displaystyle\rm\sqrt{n}\; = \frac{n}{\sqrt{n}} \ \Rightarrow\ \frac{A}B = \frac{nB}A.\ \:$</span> Taking fractional parts yields <span class="math-container" id="172">$\rm\displaystyle\ \frac{b}B = \frac{a}A\ $</span> for <span class="math-container" id="173">$\rm\ 0 \le b < B\:.\ $</span> But <span class="math-container" id="174">$\rm\displaystyle\ B\nmid A\ \Rightarrow\:\ b\ne 0\ \:\Rightarrow\ \frac{A}B = \frac{a}b\ $</span> contra <span class="math-container" id="175">$\rm B $</span> least. <span class="math-container" id="176">$\:$</span>  <strong>QED</strong></p>  <p>Abstracting out the Euclidean descent at the heart of the above proof yields the following</p>  <hr>  <p><strong>THEOREM (WGD)</strong> <span class="math-container" id="177">$\quad \rm r = \sqrt{n}\ \:$</span> is integral if rational,<span class="math-container" id="178">$\:$</span> for <span class="math-container" id="179">$\:\rm n\in\mathbb{N}$</span></p>  <p><strong>Proof</strong> <span class="math-container" id="180">$\ \ $</span>  Put <span class="math-container" id="181">$\ \ \displaystyle\rm r = \frac{A}B ,\;$</span> least <span class="math-container" id="182">$\rm\; B>0\:.\;$</span> <span class="math-container" id="183">$\  \displaystyle\rm\sqrt{n}\; = \frac{n}{\sqrt{n}} \ \Rightarrow\ \frac{A}B = \frac{nB}A\ \Rightarrow\ B\:|\:A\ $</span> by this key result:</p>  <hr>  <p><strong>Unique Fractionization</strong> <span class="math-container" id="184">$\ $</span> The least denominator <span class="math-container" id="185">$\rm\:B\:$</span> of a fraction divides every denominator.</p>  <p><strong>Proof</strong> <span class="math-container" id="186">$\rm\displaystyle\ \ \frac{A}B = \frac{C}D\ \Rightarrow\ \frac{D}B = \frac{C}A \:.\ $</span> Taking fractional parts <span class="math-container" id="187">$\rm\displaystyle\ \frac{b}B = \frac{a}A\ $</span> where <span class="math-container" id="188">$\rm\ 0 \le b < B\:.\ $</span> But  </p>  <p><span class="math-container" id="189">$\rm\displaystyle\ \:B\nmid D\ \Rightarrow\ b\ne 0\ \Rightarrow\ \frac{A}B = \frac{a}b\ \ $</span> contra leastness of <span class="math-container" id="190">$\rm\:B.\,$</span> Thus <span class="math-container" id="191">$\rm\,B\mid D\,$</span> as claimed <span class="math-container" id="192">$\quad $</span> <strong>QED</strong> </p>  <hr>  <p>Thus JHC's proof essentially "inlines" the above proof - which can be more conceptually viewed as the principality of (denominator) ideals in <span class="math-container" id="193">$\mathbb Z,\,$</span> cf. <a href="https://math.stackexchange.com/questions/2883/show-that-3p2-q2-implies-3p-and-3q/2941#2941">my post here</a>. See also <a href="http://mathforum.org/kb/message.jspa?messageID=1181899" rel="noreferrer">this sci.math discussion</a> between John Conway and I (click "plain text" to get correct format).</p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2011-01-06">2011-01-06</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:242</span><div class="-flair">
+<span class="reputation-score" dir="ltr">217k</span><br> </div>
+<span" aria-hidden="true"><span class="badge1"> </span><span class="badgecount">29</span></span><span class="v-visible-sr">29gold badges</span>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">190</span></span><span class="v-visible-sr">190silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">628</span></span><span class="v-visible-sr">628bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-16544" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="16544">
+<ul class="comments-list js-comments-list">
+<li id="comment-4664233" class="comment js-comment " data-comment-id="4664233">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">0</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">that's fair enough. I posted this a while ago, when I was not as familiar with the social nuances of this site. Mea culpa.</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2017-05-05</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-16596" class="answer accepted-answer"data-answerid="16596"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="16596">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="19">19</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>You can also use the <a href="http://en.wikipedia.org/wiki/Rational_root_theorem">rational root test</a> on the polynomial equation <span class="math-container" id="194">$x^2-2=0$</span> (whose solutions are <span class="math-container" id="195">$\pm \sqrt{2}$</span>).  If this equation were to have a rational solution <span class="math-container" id="196">$\frac{a}{b}$</span>, then <span class="math-container" id="197">$a \vert 2$</span> and <span class="math-container" id="198">$b \vert 1$</span>, hence <span class="math-container" id="199">$\frac{a}{b}\in \{\pm 1, \pm 2\}$</span>.  However, it's straightforward to check that none of <span class="math-container" id="200">$1,-1,2,-2$</span> satisfy the equation <span class="math-container" id="201">$x^2-2=0$</span>.  Therefore the equation has no rational roots and <span class="math-container" id="202">$\sqrt{2}$</span> is irrational.</p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2011-01-06">2011-01-06</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id: user</span><div class="-flair">
+<span class="reputation-score" dir="ltr"></span><br> </div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-760289" class="answer accepted-answer"data-answerid="760289"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="760289">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="9">9</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>There is also a proof of this theorem that uses the well ordering property of the set of positive integers, that is in a non empty set of positive integers there is always a least element. The proof follows the approach of proof by contradiction but uses the well ordering principle to find the contradiction :) -</p>  <blockquote>   <p>Let us assume <span class="math-container" id="203">$\sqrt{2}$</span> is rational, hence it can be written down in   the form <span class="math-container" id="204">$\sqrt{2}=a/b$</span> assuming that both <span class="math-container" id="205">$a$</span> and <span class="math-container" id="206">$b$</span> are positive   integers in that case if we look at the set <span class="math-container" id="207">$S = \{k\sqrt{2} \mid k, k\sqrt{2}\text{ are integers}\}$</span> we find that it's a non empty set of   positive integers, it's non empty because <span class="math-container" id="208">$a = b\sqrt{2}$</span> is in the   above set. Now using the Well ordering principle we know that every   set of positive integers which is non-empty has a minimum element, we   assume that smallest element to be <span class="math-container" id="209">$s$</span> and let it equal to <span class="math-container" id="210">$s =t\sqrt{2}$</span>. Now an interesting thing happens if we take the difference   between the following quantities <span class="math-container" id="211">$s\sqrt{2} - s = (s-t)\sqrt{2} = s(\sqrt{2} - 1)$</span> which is a smaller element than <span class="math-container" id="212">$s$</span> itself, hence   contradicting the very existence of <span class="math-container" id="213">$s$</span> being the smallest element.   Hence we find that <span class="math-container" id="214">$\sqrt{2}$</span> is irrational.</p> </blockquote>  <p>I know the proof but I am still amazed at how the author came up with the set assumption. Sometimes such assumptions make you feel kinda dumb :). If anyone has some insight regarding how to come up with such assumptions kindly post your answer in the comment, otherwise I would just assume that it was a workaround.</p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2014-04-19">2014-04-19</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:17684</span><div class="-flair">
+<span class="reputation-score" dir="ltr">305</span><br> </div>
+<span" aria-hidden="true"><span class="badge1"> </span><span class="badgecount">1</span></span><span class="v-visible-sr">1gold badges</span>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">8</span></span><span class="v-visible-sr">8silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">20</span></span><span class="v-visible-sr">20bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-987288" class="answer accepted-answer"data-answerid="987288"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="987288">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="6">6</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>Another one that is understandable by high schoolers and below.</p>  <hr>  <p>We will use the following lemma:</p>  <blockquote>   <p>If <span class="math-container" id="215">$n$</span> is an integer, <span class="math-container" id="216">$n^2$</span> is even (resp. odd) iff <span class="math-container" id="217">$n$</span> is even (resp. odd).</p> </blockquote>  <p>For the high-schoolers, the proof is about writing <span class="math-container" id="218">$(2k)^2 = 2(2k^2)$</span> and <span class="math-container" id="219">$(2k+1)^2=2(2k^2+2k)+1$</span> ...</p>  <hr>  <p>Now, assume <span class="math-container" id="220">$\sqrt 2 = \frac{a}{b}$</span> with <span class="math-container" id="221">$a$</span> and <span class="math-container" id="222">$b$</span> strictly positive integers. </p>  <p>Then <span class="math-container" id="223">$a^2=2b^2$</span>, <span class="math-container" id="224">$\implies a^2$</span> is even (<span class="math-container" id="225">$=2b^2$</span>), <span class="math-container" id="226">$\implies a$</span> is even (from the lemma), <span class="math-container" id="227">$\implies a=2a_1$</span> with <span class="math-container" id="228">$a_1 \in \mathbb N^*$</span>, <span class="math-container" id="229">$\implies b^2=2a_1^2$</span>. </p>  <p>Repeat with <span class="math-container" id="230">$b$</span> to find that <span class="math-container" id="231">$b=2b_1$</span> with <span class="math-container" id="232">$b_1 \in \mathbb N^*$</span> and <span class="math-container" id="233">$(a_1,b_1)$</span> verifies <span class="math-container" id="234">$a_1^2=2b_1^2$</span>.</p>  <p>By repeating these two steps, we build two sequences <span class="math-container" id="235">$(a_n)_{n\in \mathbb N}$</span> and <span class="math-container" id="236">$(b_n)_{n\in \mathbb N}$</span> with values in <span class="math-container" id="237">$\mathbb N^*$</span> and <em>strictly</em> decreasing, which is impossible, ergo <span class="math-container" id="238">$\sqrt{2}$</span> is irrational. </p>  <p><em>(Here of course we use the well-ordering principle which most high schoolders would not know about, but the intuition that the sequence would hit <span class="math-container" id="239">$0$</span> after at most <span class="math-container" id="240">$a_0=a$</span> steps is easy to get).</em></p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2014-10-23">2014-10-23</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:177651</span><div class="-flair">
+<span class="reputation-score" dir="ltr">3k</span><br> </div>
+<span" aria-hidden="true"><span class="badge1"> </span><span class="badgecount">1</span></span><span class="v-visible-sr">1gold badges</span>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">10</span></span><span class="v-visible-sr">10silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">28</span></span><span class="v-visible-sr">28bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-987288" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="987288">
+<ul class="comments-list js-comments-list">
+<li id="comment-3039067" class="comment js-comment " data-comment-id="3039067">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">0</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">You could stop at <span class="math-container" id="241">$b^2=2a_1^2$</span> by noting that both <span class="math-container" id="242">$a^2$</span> and <span class="math-container" id="243">$b^2$</span> cannot be even.</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2015-10-22</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-232342" class="answer accepted-answer"data-answerid="232342"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="232342">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="5">5</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>Here are some of my favorite (sketches) of proofs for the irrationality of <span class="math-container" id="244">$\sqrt{2}$</span>.</p>  <ul> <li>Using Newton's method to approximate roots of the polynomial <span class="math-container" id="245">$f(x) = x^2 - 2$</span>, then showing that the sequence does not converge to a rational number.</li> <li>Proof by contradiction, assume that <span class="math-container" id="246">$\sqrt{2} = \frac{n}{m}$</span> for some <span class="math-container" id="247">$n,m \in \mathbb{Z}$</span> with <span class="math-container" id="248">$m \neq 0$</span>, then <span class="math-container" id="249">$2m^{2} = n^2$</span>, hence <span class="math-container" id="250">$n$</span> must be even and we can let <span class="math-container" id="251">$n = 2k$</span> for some <span class="math-container" id="252">$k \in \mathbb{Z}$</span>, but then <span class="math-container" id="253">$m^2 = 2k^2$</span> will also be even, which is impossible if <span class="math-container" id="254">$\frac{n}{m}$</span> is reduced. Therefore, <span class="math-container" id="255">$\sqrt{2}$</span> cannot be expressed as a ratio of integers.</li> <li>Since <span class="math-container" id="256">$f(x) = x^2 -2$</span> is irreducible over <span class="math-container" id="257">$\mathbb{Q}[x]$</span>, its roots must lie in some finite extension field <span class="math-container" id="258">$\mathbb{Q}(\sqrt{2})$</span> over the rationals.</li> </ul>  <p>[Reposted from closed topic<a href="https://math.stackexchange.com/questions/231857/prove-the-square-root-of-2-is-irrational/231882#231882">Prove the square root of 2 is irrational</a></p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2012-11-07">2012-11-07</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:48089</span><div class="-flair">
+<span class="reputation-score" dir="ltr">622</span><br> </div>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">3</span></span><span class="v-visible-sr">3silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">9</span></span><span class="v-visible-sr">9bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-232342" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="232342">
+<ul class="comments-list js-comments-list">
+<li id="comment-515753" class="comment js-comment " data-comment-id="515753">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">3</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">It would <span class="math-container" id="5387484">$h$</span>elp to give further  details about the first and third methods. I know a lot about these topics yet I cannot be sure *precisely* what you have in mind.</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2012-11-07</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-1323384" class="answer accepted-answer"data-answerid="1323384"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="1323384">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="4">4</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>Let <span class="math-container" id="259">$x^2-2=0$</span> be the polynomial equations this have a possibles rational solutions <span class="math-container" id="260">$\pm1,\pm2$</span> and no one of this is a solution then the solution is irrational and we now that this are <span class="math-container" id="261">$\pm \sqrt2$</span></p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2015-06-13">2015-06-13</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:233046</span><div class="-flair">
+<span class="reputation-score" dir="ltr">395</span><br> </div>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">3</span></span><span class="v-visible-sr">3silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">17</span></span><span class="v-visible-sr">17bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-1695874" class="answer accepted-answer"data-answerid="1695874"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="1695874">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="4">4</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>The irrationality of the square root of 2 follows from our knowledge of how Pythagorean triples behave, specifically, that for positive integers x, y, and z, if x^2 + y^2 = z^2, then x is not equal to y. But if the square root of 2 were rational, then there would exist positive integers a and b such that a/b = the square root of 2. Then a^2/b^2 = 2. Then a^2 = 2b^2. Then b^2 + b^2 = a^2, and so we would have a Pythagorean triple with x = y, a contradiction.</p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2016-03-13">2016-03-13</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id: user</span><div class="-flair">
+<span class="reputation-score" dir="ltr"></span><br> </div>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-1695874" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="1695874">
+<ul class="comments-list js-comments-list">
+<li id="comment-5738782" class="comment js-comment " data-comment-id="5738782">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">0</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">How do you know that <span class="math-container" id="262">$x \ne y$</span>? Seems to assume the conclusion.</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2018-05-15</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-2456731" class="answer accepted-answer"data-answerid="2456731"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="2456731">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="4">4</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p>Here's a short algebraic proof. It nowhere uses prime.</p>  <p>You need to first show that <span class="math-container" id="263">$1<\sqrt{2}<2,$</span> but that is obvious. </p>  <p>We first assume that <span class="math-container" id="264">$\sqrt{2}$</span> is rational. Then pick the smallest positive <span class="math-container" id="265">$q$</span> so that <span class="math-container" id="266">$p=q\sqrt{2}$</span> is an integer. Then <span class="math-container" id="267">$q<p<2q.$</span> </p>  <p>Now compute:</p>  <p><span class="math-container" id="268">$\left(\frac{2q-p}{p-q}\right)^2 = \frac{4q^2-4pq+p^2}{p^2-2pq+q^2}=\frac{6q^2-4pq}{3q^2-2pq}=2$</span></p>  <p>But <span class="math-container" id="269">$q<p<2q$</span> means <span class="math-container" id="270">$0<p-q<q$</span>, and <span class="math-container" id="271">$\frac{2q-p}{p-q}=\sqrt{2},$</span> contradicting the assumption that <span class="math-container" id="272">$q$</span> was the least possible positive denominator.</p>  <hr>  <p><strong>More generally</strong></p>  <p>We can prove, more generally, that if <span class="math-container" id="273">$n$</span> is an integer and <span class="math-container" id="274">$n^2<D<(n+1)^2$</span> then <span class="math-container" id="275">$\sqrt{D}$</span> is irrational. In the case <span class="math-container" id="276">$D=2$</span> we have <span class="math-container" id="277">$n=1$</span>.</p>  <p>If <span class="math-container" id="278">$\sqrt{D}$</span> is rational, find the least positive <span class="math-container" id="279">$q$</span> such that there is a <span class="math-container" id="280">$p$</span> such that <span class="math-container" id="281">$\frac{p}{q}=\sqrt{D}$</span>. So <span class="math-container" id="282">$p^2=Dq^2$</span> means <span class="math-container" id="283">$n^2q^2<p^2<(n+1)^2q^2$</span> and hence <span class="math-container" id="284">$nq<p<(n+1)q$</span>.</p>  <p>Therefore <span class="math-container" id="285">$0<p-nq<q$</span>.</p>  <p>But then:</p>  <p><span class="math-container" id="286">$\left(\frac{Dq-pn}{p-qn}\right)^2=\frac{D^2q^2-2Dpqn + p^2n^2}{p^2-2pqn+q^2n^2}=\frac{D^2q^2-2Dpqn + Dq^2n^2}{Dq^2-2pqn+q^2n^2}=D\tag{*}$</span></p>  <p>contradicting the fact that <span class="math-container" id="287">$q$</span> was the smallest positive denominator for <span class="math-container" id="288">$\sqrt{D}$</span>.</p>  <hr>  <p>You can prove if <span class="math-container" id="289">$D\geq 0$</span> is an integer, then there is exactly one non-negative integer <span class="math-container" id="290">$n$</span> such that <span class="math-container" id="291">$n^2\leq D<(n+1)^2$</span>. We first prove <span class="math-container" id="292">$n$</span> exists:</p>  <blockquote>   <p>Since <span class="math-container" id="293">$(1+D)^2=D+(1+D+D^2)$</span>, we know that <span class="math-container" id="294">$D<(1+D)^2$</span> and hence there is a least positive <span class="math-container" id="295">$m$</span> such that <span class="math-container" id="296">$D<m^2.$</span> We know <span class="math-container" id="297">$m\neq 0$</span> because <span class="math-container" id="298">$D\geq 0^2$</span>,  so <span class="math-container" id="299">$m\geq 1$</span>. Let <span class="math-container" id="300">$n=m-1$</span>. Then <span class="math-container" id="301">$n^2\leq D<(n+1)^2$</span>.</p> </blockquote>  <p>Uniqueness follows from:</p>  <blockquote>   <p>If <span class="math-container" id="302">$0\leq m<n$</span> then <span class="math-container" id="303">$1\leq m+1\leq n$</span> and thus <span class="math-container" id="304">$(m+1)^2\leq n^2$</span>. </p>      <p>So if <span class="math-container" id="305">$n^2\leq D< (n+1)^2$</span> and <span class="math-container" id="306">$m^2\leq D< (m+1)^2$</span>, then we can't have <span class="math-container" id="307">$m<n$</span> or we'd have <span class="math-container" id="308">$D<(m+1)^2\leq n^2\leq D$</span>. Similarly, we can't have <span class="math-container" id="309">$m>n$</span>. So we must have <span class="math-container" id="310">$m=n$</span>.</p> </blockquote>  <p>Together, the above say that if <span class="math-container" id="311">$D\geq 0$</span> then <span class="math-container" id="312">$\sqrt{D}$</span> is rational if and only if <span class="math-container" id="313">$\sqrt{D}$</span> is an integer.</p>  <hr>  <p>(*) The magic trick in the above computation is that If <span class="math-container" id="314">$\frac{np}{nq}=\sqrt{D}$</span> then <span class="math-container" id="315">$\frac{Dq}{p}=\sqrt{D}.$</span> And if <span class="math-container" id="316">$\frac{a}{b}=\frac{c}{d}$</span> then <span class="math-container" id="317">$d\neq b$</span> then <span class="math-container" id="318">$\frac {a-c}{b-d}=\frac{a}{b}.$</span></p>  <hr>  <p>The expression is arrived by computing (using that <span class="math-container" id="319">$p=q\sqrt{D}):$</span></p>  <p><span class="math-container" id="320">$0<\left(p+q\sqrt{D}\right)\left(\sqrt{D}-n\right)=(qD-np)+(p-nq)\sqrt{D}$</span></p>  <p>From this we see <span class="math-container" id="321">$(qD-np)^2-D(p-nq)^2=0.$</span></p>  <p>And <span class="math-container" id="322">$p-nq=q(\sqrt{D}-n)<q.$</span> since <span class="math-container" id="323">$0<\sqrt{D}-n<1.$</span></p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2017-10-04">2017-10-04</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:7933</span><div class="-flair">
+<span class="reputation-score" dir="ltr">132k</span><br> </div>
+<span" aria-hidden="true"><span class="badge1"> </span><span class="badgecount">11</span></span><span class="v-visible-sr">11gold badges</span>
+<span" aria-hidden="true"><span class="badge2"> </span><span class="badgecount">146</span></span><span class="v-visible-sr">146silver badges</span>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">296</span></span><span class="v-visible-sr">296bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="answer-2974425" class="answer accepted-answer"data-answerid="2974425"  itemprop="acceptedAnswer">
+<div class="post-layout">
+<div class="votecell post-layout--left">
+<div class="js-voting-container grid fd-column ai-stretch gs4 fc-black-200" data-post-id="2974425">
+<div class="js-vote-count grid--cell fc-black-500 fs-title grid fd-column ai-center" itemprop="upvoteCount" data-value="3">3</div>
+<div class="js-accepted-answer-indicator grid--item fc-green-500 ta-center p4  d-none" aria-label="accepted">
+<svg aria-hidden="true" class="svg-icon iconCheckmarkLg" width="36" height="36" viewBox="0 0 36 36"><path d="M6 14l8 8L30 6v8L14 30l-8-8v-8z"/></svg>
+</div>
+</div>
+</div>
+<div class="answercell post-layout--right">
+<div class="post-text" itemprop="text">
+<p><em>Proposition</em>: In base <span class="math-container" id="324">$2$</span> any square must end in an even number of trailing zeros.</p>  <p>The proposition comes directly from, for example, multiplying a binary number with itself using the standard algorithm or simply by squaring</p>  <p><span class="math-container" id="325">$ (\sum_{k=t}^{N} b_k 2^k)^2=B2^{2t+1}+b_t2^{2t}$</span></p>  <p>If we can represent <span class="math-container" id="326">$\sqrt{2}=\frac{p}{q}$</span> then</p>  <p><span class="math-container" id="327">$ 2q^2=p^2 $</span></p>  <p>Multiplying by <span class="math-container" id="328">$2$</span> is shifting all bits of a binary number to the left, so if the number was ending in <span class="math-container" id="329">$m$</span> trailing zeros after multiplication by <span class="math-container" id="330">$2$</span> it will end in <span class="math-container" id="331">$m+1$</span> zeros.</p>  <p>This means that <span class="math-container" id="332">$2q^2$</span> is ending in odd while <span class="math-container" id="333">$p^2$</span> is ending in an even number of zeros. Thus, these two cannot be equal.</p>  <p>*Notice that this proof does not care about the relative primality of <span class="math-container" id="334">$p$</span> and <span class="math-container" id="335">$q$</span>.</p> 
+ </div><div class="grid mb0 fw-wrap ai-start jc-end gs8 gsy"><div class="post-signature owner grid--cell">
+<div class="user-info"> 
+ <div class="user-action-time">asked <span title="2018-10-28">2018-10-28</span>
+</div><div class="user-details" itemprop="author" itemscope itemtype="http://schema.org/Person"><span>user id:579318</span><div class="-flair">
+<span class="reputation-score" dir="ltr">296</span><br> </div>
+<span" aria-hidden="true"><span class="badge3"> </span><span class="badgecount">2</span></span><span class="v-visible-sr">2bronze badges</span>
+</div>
+</div></div>
+</div>
+</div>
+<div class="post-layout--right">
+<div id="comments-2974425" class="comments js-comments-container bt bc-black-2 mt12 " data-post-id="2974425">
+<ul class="comments-list js-comments-list">
+<li id="comment-6268141" class="comment js-comment " data-comment-id="6268141">
+<div class="js-comment-actions comment-actions">
+ <div class="comment-score js-comment-edit-hide">
+ <span class="cool">0</span></div>
+</div><div class="comment-text js-comment-text-and-form">
+<div class="comment-body js-comment-edit-hide">
+ <span class="comment-copy">I find this the most intuitive of the proofs posted so far. (Disclaimer: I studied electronic engineering.)</span> – <span class="comment-date" dir="ltr"><span class="relativetime-clean">2018-12-15</span></span>
+ </div>
+</div></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+            
+
+
+
+
+
+
+
+
+</div>
+</div>
+            
+            
+                            <div id="sidebar" class="module sidebar-linked" role="complementary" aria-label="sidebar">
+                            <div class="module sidebar-linked">
+
+<h4 id="h-linked">Related Posts<hr></h4><div class="linked" data-tracker="lq=1">
+[2883] Show that <span class="math-container" id="21600">$3p^2=q^2$</span> implies <span class="math-container" id="21601">$3|p$</span> and <span class="math-container" id="21602">$3|q$</span>
+[699002] Examples of mathematical results discovered "late"
+</div> <hr>
+
+<br>
+
+</div>
+            </div>
+    </div>
+        </div>
+    </div>
+
+ 
+    </body>
+    </html>
+
