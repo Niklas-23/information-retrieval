@@ -31,4 +31,6 @@ Open questions for the coaching session (feel free to add questions if you have 
 - What is about PyTerrier as this is an information retrieval framework and provides a lot of ready-to-use information
   retrieval models. I think it's still difficult to get everything working due to the complex dataset.
 - Do we need a frontend or cli? I hope not and would prefer to use jupyter notebooks as a kind of frontend to run
-  retrieval models. 
+  retrieval models.
+- Do we need to write a project report? If yes, how many pages? What should be the content of the report, should we also
+  explain the models or just evaluate our results?
