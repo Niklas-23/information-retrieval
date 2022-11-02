@@ -96,7 +96,7 @@ class DataReaderRecord:
             for answer in lst_answer:
                 if answer.owner_user_id is not None:
                     if answer.owner_user_id == user_id:
-                        lst_of_answers.append(str(answer))
+                        lst_of_answers.append(answer)
         return lst_of_answers
 
     def get_question_of_tag(self, tag):
