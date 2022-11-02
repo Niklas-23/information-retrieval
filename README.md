@@ -34,3 +34,6 @@ Open questions for the coaching session (feel free to add questions if you have 
   retrieval models.
 - Do we need to write a project report? If yes, how many pages? What should be the content of the report, should we also
   explain the models or just evaluate our results?
+  
+## Environment
+You can create a conda environment out of the ir.yml see [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment)  on Building Identical Environments for details. The environment includes Pyterrier which needs a JAVA-Runtime so make sure OpenJDK or any Version of Java is installed and can be reached by any program.
