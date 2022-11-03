@@ -37,3 +37,6 @@ Open questions for the coaching session (feel free to add questions if you have 
   
 ## Environment
 You can create a conda environment out of the ir.yml see [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment)  on Building Identical Environments for details. The environment includes Pyterrier which needs a JAVA-Runtime so make sure OpenJDK or any Version of Java is installed and can be reached by any program.
+
+## Further Info
+For further Information please consult the Jupyter Notebooks in the notebooks folder
