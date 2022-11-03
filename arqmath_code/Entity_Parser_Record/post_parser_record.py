@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from Entities.Post import Question, Answer
+from ..Entities.Post import Question, Answer
 
 
 class PostParserRecord:

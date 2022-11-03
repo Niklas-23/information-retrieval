@@ -1,7 +1,7 @@
 import csv
 import xml.etree.ElementTree as ET
 
-from Visualization.generate_html_file import HtmlGenerator
+from .Visualization.generate_html_file import HtmlGenerator
 
 
 class Topic:

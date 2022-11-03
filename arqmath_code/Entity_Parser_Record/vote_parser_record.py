@@ -1,5 +1,5 @@
 import xml.etree.ElementTree as ET
-from Entities.Vote import Vote
+from ..Entities.Vote import Vote
 
 
 class VoteParserRecord:
