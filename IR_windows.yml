@@ -10,7 +10,7 @@ dependencies:
   - python=3.9.13
   - setuptools=63.4.1
   - sqlite=3.39.3
-  - tk=8.6.12=
+  - tk=8.6.12
   - tzdata=2022e
   - wheel=0.37.1
   - xz=5.2.6
