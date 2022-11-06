@@ -2,22 +2,19 @@ name: IR
 channels:
   - defaults
 dependencies:
-  - ca-certificates=2022.07.19=hca03da5_0
-  - certifi=2022.9.24=py39hca03da5_0
-  - libcxx=14.0.6=h848a8c0_0
-  - libffi=3.4.2=hc377ac9_4
-  - ncurses=6.3=h1a28f6b_3
-  - openssl=1.1.1q=h1a28f6b_0
-  - pip=22.2.2=py39hca03da5_0
-  - python=3.9.13=hbdb9e5c_2
-  - readline=8.2=h1a28f6b_0
-  - setuptools=63.4.1=py39hca03da5_0
-  - sqlite=3.39.3=h1058600_0
-  - tk=8.6.12=hb8d0fd4_0
-  - tzdata=2022e=h04d1e81_0
-  - wheel=0.37.1=pyhd3eb1b0_0
-  - xz=5.2.6=h1a28f6b_0
-  - zlib=1.2.13=h5a0b063_0
+  - ca-certificates=2022.07.19
+  - certifi=2022.9.24
+  - libffi=3.4.2
+  - openssl=1.1.1
+  - pip=22.2.2
+  - python=3.9.13
+  - setuptools=63.4.1
+  - sqlite=3.39.3
+  - tk=8.6.12=
+  - tzdata=2022e
+  - wheel=0.37.1
+  - xz=5.2.6
+  - zlib=1.2.13
   - pip:
     - appnope==0.1.3
     - asttokens==2.0.8
