@@ -38,5 +38,7 @@ Open questions for the coaching session (feel free to add questions if you have 
 ## Environment
 You can create a conda environment out of the ir.yml see [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment)  on Building Identical Environments for details. The environment includes Pyterrier which needs a JAVA-Runtime so make sure OpenJDK or any Version of Java is installed and can be reached by any program.
 
+If you get an error regarding JAVA_HOME, you might have to check if your environment variables are set up correctly. To do that, open the anaconda command line and check with `java --version`, which Java Version Anaconda is using. If you get an error message here, you might want to check, if you have JDK installed. Furthermore with `echo %JAVA_HOME%` check where you have to set the JAVA_HOME variable path to. Now set a new Environment variable to "JAVA_HOME" with the path from earlier and also add the path to the "path" variable. Restart your command line and set up the environment again.
+
 ## Further Info
 For further Information please consult the Jupyter Notebooks in the notebooks folder
