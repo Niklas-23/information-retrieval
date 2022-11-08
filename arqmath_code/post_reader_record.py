@@ -166,19 +166,3 @@ class DataReaderRecord:
                     os.makedirs(temp2)
                 dic_directories[year+"-"+month] = temp2
         return dic_directories
-
-
-def main():
-    parser = argparse.ArgumentParser(description='By setting the file path for MSE ARQMath Dataset,'
-                                                 'One can iterate read the related data and go through questions')
-    parser.add_argument('-ds', type=str, help="File path for the MSE ARQMath Dataset.", required=True)
-    args = vars(parser.parse_args())
-    clef_home_directory_file_path = (args['ds'])
-    dr = DataReaderRecord(clef_home_directory_file_path)
-    lst_questions = dr.get_question_of_tag("calculus")
-    lst_answers = dr.get_answers_posted_by_user(132)
-    dr.get_html_pages([1, 5], "../html_files")
-
-
-if __name__ == "__main__":
-    main()
