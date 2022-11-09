@@ -8,6 +8,7 @@ from .Visualization.generate_html_file import HtmlGenerator
 import argparse
 from shutil import copyfile
 import csv
+from .Entities.Post import Answer
 
 
 class DataReaderRecord:
@@ -166,3 +167,12 @@ class DataReaderRecord:
                     os.makedirs(temp2)
                 dic_directories[year+"-"+month] = temp2
         return dic_directories
+
+    def get_all_answer_posts(self) -> [Answer]:
+        for answer_id in self.post_parser.map_answers:
+            list_answers = self.post_parser.map_answers[answer_id]
+            for answer in list_answers:
+                yield answer
+
+    def get_tags_for_answer_by_id(self, question_id) -> [list]:
+        return self.post_parser.map_questions[question_id].tags
