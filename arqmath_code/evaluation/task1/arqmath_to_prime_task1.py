@@ -11,6 +11,11 @@ def convert_result_files_to_trec(submission_dir, qrel_result_dic, trec_dir, prim
     @param trec_dir: the destination to keep the trec_formatted files
     @param prim_dir: the destination to keep the prim_trec_formatted files
     """
+    if not os.path.isdir(trec_dir):
+        os.mkdir(trec_dir)
+    if not os.path.isdir(prim_dir):
+        os.mkdir(prim_dir)
+
     for file in os.listdir(submission_dir):
         topic_result = {}
         result_file = open(submission_dir + file, newline='', encoding="utf-8")
