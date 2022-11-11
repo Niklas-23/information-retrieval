@@ -1,6 +1,7 @@
 import abc
 from typing import List, Tuple
 
+from arqmath_code.topic_file_reader import Topic
 from arqmath_code.Entities.Post import Answer
 from arqmath_code.post_reader_record import DataReaderRecord
 
@@ -18,6 +19,6 @@ class Pipeline(metaclass=abc.ABCMeta):
         self.data_reader = data_reader
 
     @abc.abstractmethod
-    def run(self) -> List[Tuple[Answer, float]]:
+    def run(self) -> List[Tuple[Topic, Answer, float]]:
         """Chain all Models to complete the dataflow"""
         raise NotImplementedError

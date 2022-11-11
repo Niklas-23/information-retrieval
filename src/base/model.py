@@ -13,6 +13,6 @@ class Model(metaclass=abc.ABCMeta):
                 NotImplemented)
 
     @abc.abstractmethod
-    def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Tuple[Union[Question, Answer], float]]:
+    def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Tuple[Topic, Union[Question, Answer], float]]:
         """Performs the models calculations on the data"""
         raise NotImplementedError
