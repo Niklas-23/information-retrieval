@@ -1,5 +1,6 @@
 from collections import defaultdict
 
+from arqmath_code.post_reader_record import DataReaderRecord
 from src import init_data
 from src.base.pipeline import Pipeline
 from typing import Callable
@@ -8,9 +9,9 @@ import pandas as pd
 
 class Runner:
 
-    def __init__(self, pipeline: Callable[..., Pipeline], n=1):
+    def __init__(self, pipeline: Callable[[DataReaderRecord], Pipeline], n=1):
         self.topic_reader, self.data_reader = init_data(task=1)
-        self.pipeline = pipeline()
+        self.pipeline = pipeline(self.data_reader)
         self.n = n
 
     def run(self, path: str) -> pd.DataFrame:
