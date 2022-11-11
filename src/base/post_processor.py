@@ -13,7 +13,12 @@ class PostProcessor(metaclass=abc.ABCMeta):
                 callable(subclass.forward) or
                 NotImplemented)
 
+    def __call__(self, queries: List[Topic], ranking: List[Tuple[Topic, Union[Question, Answer], float]]) -> List[
+        Tuple[Topic, Union[Question, Answer], float]]:
+        return self.forward(queries=queries, ranking=ranking)
+
     @abc.abstractmethod
-    def forward(self, queries: List[Topic], documents: List[Tuple[Topic, Union[Question, Answer], float]]) -> List[Tuple[Topic, Union[Question, Answer], float]]:
+    def forward(self, queries: List[Topic], ranking: List[Tuple[Topic, Union[Question, Answer], float]]) -> List[
+        Tuple[Topic, Union[Question, Answer], float]]:
         """Runs a PostProcessing against an incoming ranked document collection"""
         raise NotImplementedError

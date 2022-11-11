@@ -18,6 +18,9 @@ class Pipeline(metaclass=abc.ABCMeta):
         """init all models"""
         self.data_reader = data_reader
 
+    def __call__(self, queries: List[Topic]) -> List[Tuple[Topic, Answer, float]]:
+        return self.run(queries=queries)
+
     @abc.abstractmethod
     def run(self, queries: List[Topic]) -> List[Tuple[Topic, Answer, float]]:
         """Chain all Models to complete the dataflow"""

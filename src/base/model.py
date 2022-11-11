@@ -12,6 +12,9 @@ class Model(metaclass=abc.ABCMeta):
                 callable(subclass.forward) or
                 NotImplemented)
 
+    def __call__(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Tuple[Topic, Union[Question, Answer], float]]:
+        return self.forward(queries=queries, documents=documents)
+
     @abc.abstractmethod
     def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Tuple[Topic, Union[Question, Answer], float]]:
         """Performs the models calculations on the data"""

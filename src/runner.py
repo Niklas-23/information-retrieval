@@ -18,7 +18,7 @@ class Runner:
 
         df: pd.DataFrame = pd.DataFrame()
         for i in range(self.n - 1):
-            data_run_i = self.pipeline.run(queries=topics)
+            data_run_i = self.pipeline(queries=topics)
             df_dict_i = defaultdict(list)
             for data_tuple in data_run_i:
                 df_dict_i["Query_Id"].append(data_tuple[0])
@@ -29,5 +29,5 @@ class Runner:
             df_i = df_i.sort_values(['Score']).groupby('Query_id')
             df_i["Rank"] = df_i.cumcount()
             df = pd.concat([df, df_i])
-        df.to_csv(path)
+        df.to_csv(path, index=False, sep='\t')
         return df

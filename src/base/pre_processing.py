@@ -13,6 +13,9 @@ class PreProcessor(metaclass=abc.ABCMeta):
                 callable(subclass.forward) or
                 NotImplemented)
 
+    def __call__(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Union[Question, Answer]]:
+        return self.forward(queries=queries, documents=documents)
+
     @abc.abstractmethod
     def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Union[Question, Answer]]:
         """Runs a PostProcessing against an incoming ranked document collection"""
