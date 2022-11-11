@@ -55,8 +55,12 @@ will be given to you. The idea is to inherit them to define your Model and Pipel
 ### Model-Class:
 - init(model_config: dict) # model_config_dict defined elsewhere in a config file
   - Model initialization steps
-- forward(queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Union[Question, Answer], float]
+- forward(queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Tuple[Union[Question, Answer], float]]
   - here you write your model code
+
+### PostProcessor
+- forward(queries: List[Topic], documents: List[Tuple[Union[Question, Answer], float]]) -> List[Tuple[Union[Question, Answer], float]]
+  - here you write the code for a post processor that takes ranked documents and returns another set of ranked documents. For example a filter.
 
 ### Runner:
 This class will be predefined and used for evaluating and running your pipeline so you won't have to tinker with it.
@@ -67,7 +71,7 @@ This class will be predefined and used for evaluating and running your pipeline 
 ### Pipeline-Class:
 init():
 - Init all models
-run():
+run() -> List[Tuple[Answer, float]]:
 - Chain models, apply processing
 
 **The following example is only for *VISUAL UNDERSTANDING* purposes of the architecture and does not pose a real world use case!!!**
