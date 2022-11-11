@@ -14,6 +14,6 @@ class PreProcessor(metaclass=abc.ABCMeta):
                 NotImplemented)
 
     @abc.abstractmethod
-    def forward(selfqueries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Union[Question, Answer]]:
+    def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Union[Question, Answer]]:
         """Runs a PostProcessing against an incoming ranked document collection"""
         raise NotImplementedError
