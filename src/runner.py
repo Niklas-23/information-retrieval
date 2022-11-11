@@ -6,7 +6,7 @@ from typing import Callable
 import pandas as pd
 
 
-class Runner():
+class Runner:
 
     def __init__(self, pipeline: Callable[..., Pipeline], n=1):
         self.topic_reader, self.data_reader = init_data(task=1)
