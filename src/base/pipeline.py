@@ -19,6 +19,6 @@ class Pipeline(metaclass=abc.ABCMeta):
         self.data_reader = data_reader
 
     @abc.abstractmethod
-    def run(self) -> List[Tuple[Topic, Answer, float]]:
+    def run(self, queries: List[Topic]) -> List[Tuple[Topic, Answer, float]]:
         """Chain all Models to complete the dataflow"""
         raise NotImplementedError
