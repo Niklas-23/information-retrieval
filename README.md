@@ -49,6 +49,31 @@ get an error message here, you might want to check, if you have JDK installed. F
 where you have to set the JAVA_HOME variable path to. Now set a new Environment variable to "JAVA_HOME" with the path
 from earlier and also add the path to the "path" variable. Restart your command line and set up the environment again.
 
+## Architecture
+In the following you'll find a short overview over the architecture to use when coding your Pipeline and Models. All these classes
+will be given to you. The idea is to inherit them to define your Model and Pipeline.
+### Model-Class:
+- init(model_config: dict) # model_config_dict defined elsewhere in a config file
+  - Model initialization steps
+- forward(queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Union[Question, Answer], float]
+  - here you write your model code
+
+### Runner:
+This class will be predefined and used for evaluating and running your pipeline so you won't have to tinker with it.
+- init(Pipeline, n=1) -> Data loading, Pipeline init
+- pipeline.run()
+- Rank & Sort & Evaluate
+
+### Pipeline-Class:
+init():
+- Init all models
+run():
+- Chain models, apply processing
+
+**The following example is only for *VISUAL UNDERSTANDING* purposes of the architecture and does not pose a real world use case!!!**
+Pipeline e.g.: PreProcessing -> Model (Binary Tag Retrieval) -> Model (Question Retrieval) -> Model(Answer retrieval Title) -> Model (Cross encoding) -> Model (Top K Filtering)
+													             					| -> Answer Retrieval Formulas ->
+
 ## Further Info
 
 For further Information please consult the Jupyter Notebooks in the notebooks folder
