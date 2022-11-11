@@ -22,7 +22,8 @@ Current state of understanding:
   address is printed (don't know why, further investigation needed). However, it worked to generate html
   pages (see html_pages directory). The code used to read the dataset is copied from the ARQMath GitHub
   repo (https://github.com/ARQMath/ARQMathCode).
-- Next steps: Try to print some posts and questions
+- Code for preprocessing the dataset and creating an index for PyTerrier can be found in
+  this [repo](https://gitlab.com/dprl/pt-arqmath/-/tree/main/).
 
 Open questions for the coaching session (feel free to add questions if you have any):
 
@@ -34,11 +35,19 @@ Open questions for the coaching session (feel free to add questions if you have 
   retrieval models.
 - Do we need to write a project report? If yes, how many pages? What should be the content of the report, should we also
   explain the models or just evaluate our results?
-  
-## Environment
-You can create a conda environment out of the ir.yml see [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment)  on Building Identical Environments for details. The environment includes Pyterrier which needs a JAVA-Runtime so make sure OpenJDK or any Version of Java is installed and can be reached by any program.
 
-If you get an error regarding JAVA_HOME, you might have to check if your environment variables are set up correctly. To do that, open the anaconda command line and check with `java --version`, which Java Version Anaconda is using. If you get an error message here, you might want to check, if you have JDK installed. Furthermore with `echo %JAVA_HOME%` check where you have to set the JAVA_HOME variable path to. Now set a new Environment variable to "JAVA_HOME" with the path from earlier and also add the path to the "path" variable. Restart your command line and set up the environment again.
+## Environment
+
+You can create a conda environment out of the ir.yml
+see [conda documentation](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#activating-an-environment)
+on Building Identical Environments for details. The environment includes Pyterrier which needs a JAVA-Runtime so make
+sure OpenJDK or any Version of Java is installed and can be reached by any program.
+
+If you get an error regarding JAVA_HOME, you might have to check if your environment variables are set up correctly. To
+do that, open the anaconda command line and check with `java --version`, which Java Version Anaconda is using. If you
+get an error message here, you might want to check, if you have JDK installed. Furthermore with `echo %JAVA_HOME%` check
+where you have to set the JAVA_HOME variable path to. Now set a new Environment variable to "JAVA_HOME" with the path
+from earlier and also add the path to the "path" variable. Restart your command line and set up the environment again.
 
 ## Architecture
 In the following you'll find a short overview over the architecture to use when coding your Pipeline and Models. All these classes
@@ -66,4 +75,5 @@ Pipeline e.g.: PreProcessing -> Model (Binary Tag Retrieval) -> Model (Question 
 													             					| -> Answer Retrieval Formulas ->
 
 ## Further Info
+
 For further Information please consult the Jupyter Notebooks in the notebooks folder

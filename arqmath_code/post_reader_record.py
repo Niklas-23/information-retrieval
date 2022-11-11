@@ -8,6 +8,7 @@ from .Visualization.generate_html_file import HtmlGenerator
 import argparse
 from shutil import copyfile
 import csv
+from .Entities.Post import Answer
 
 
 class DataReaderRecord:
@@ -167,18 +168,11 @@ class DataReaderRecord:
                 dic_directories[year+"-"+month] = temp2
         return dic_directories
 
+    def get_all_answer_posts(self) -> [Answer]:
+        for answer_id in self.post_parser.map_answers:
+            list_answers = self.post_parser.map_answers[answer_id]
+            for answer in list_answers:
+                yield answer
 
-def main():
-    parser = argparse.ArgumentParser(description='By setting the file path for MSE ARQMath Dataset,'
-                                                 'One can iterate read the related data and go through questions')
-    parser.add_argument('-ds', type=str, help="File path for the MSE ARQMath Dataset.", required=True)
-    args = vars(parser.parse_args())
-    clef_home_directory_file_path = (args['ds'])
-    dr = DataReaderRecord(clef_home_directory_file_path)
-    lst_questions = dr.get_question_of_tag("calculus")
-    lst_answers = dr.get_answers_posted_by_user(132)
-    dr.get_html_pages([1, 5], "../html_files")
-
-
-if __name__ == "__main__":
-    main()
+    def get_tags_for_answer_by_id(self, question_id) -> [list]:
+        return self.post_parser.map_questions[question_id].tags
