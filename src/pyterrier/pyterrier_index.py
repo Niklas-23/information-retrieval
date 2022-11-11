@@ -1,11 +1,10 @@
 import os
 
 import pyterrier as pt
-import pandas as pd
 
 from arqmath_code.post_reader_record import DataReaderRecord
-from .pyterrier_math_formula_coding import *
-from .config import ROOT_DIRECTORY
+from src.pyterrier.pyterrier_math_formula_coding import *
+from src.pyterrier.config import ROOT_DIRECTORY
 
 dict_field_names = ("docno", "text", "origtext", "parentno", "votes")
 
