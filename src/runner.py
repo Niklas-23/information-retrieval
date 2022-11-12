@@ -1,6 +1,7 @@
 from collections import defaultdict
 
 from arqmath_code.post_reader_record import DataReaderRecord
+from arqmath_code.topic_file_reader import TopicReader
 from src import init_data
 from src.base.pipeline import Pipeline
 from typing import Callable
@@ -14,21 +15,21 @@ class Runner:
         self.pipeline = pipeline(self.data_reader)
         self.n = n
 
+
     def run(self, path: str) -> pd.DataFrame:
-        topics = self.topic_reader.map_topics.values()
+        topics = list(self.topic_reader.map_topics.values())
 
         df: pd.DataFrame = pd.DataFrame()
-        for i in range(self.n - 1):
+        for i in range(self.n):
             data_run_i = self.pipeline(queries=topics)
             df_dict_i = defaultdict(list)
             for data_tuple in data_run_i:
-                df_dict_i["Query_Id"].append(data_tuple[0])
+                df_dict_i["Topic_Id"].append(data_tuple[0].topic_id)
                 df_dict_i["Post_Id"].append(data_tuple[1].post_id)
                 df_dict_i["Score"].append(data_tuple[2])
                 df_dict_i["Run_Number"].append(i)
             df_i = pd.DataFrame(df_dict_i)
-            df_i = df_i.sort_values(['Score']).groupby('Query_id')
-            df_i["Rank"] = df_i.cumcount()
+            df_i["Rank"] = df_i.sort_values(['Score']).groupby('Topic_Id').cumcount(ascending=False)
             df = pd.concat([df, df_i])
         df.to_csv(path, index=False, sep='\t')
         return df

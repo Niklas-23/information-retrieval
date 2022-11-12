@@ -115,7 +115,7 @@ class DataReaderRecord:
         return lst_of_questions
 
     def get_questions(self):
-        return self.post_parser.map_questions.values()
+        return list(self.post_parser.map_questions.values())
 
     def get_html_pages(self, lst_of_questions_id, result_directory):
         """
