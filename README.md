@@ -62,7 +62,7 @@ will be given to you. The idea is to inherit them to define your Model and Pipel
 - forward(queries: List[Topic], documents: List[Tuple[Topic, Union[Question, Answer], float]]) -> List[Topic, Tuple[Union[Question, Answer], float]]
   - here you write the code for a post processor that takes ranked documents and returns another set of ranked documents. For example a filter.
 
-### PostProcessor
+### PreProcessor
 - forward(queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Union[Question, Answer]]
   - here you write the code for a pre processor that takes documents and returns another list of documents. For example a filter.
 
