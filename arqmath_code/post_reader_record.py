@@ -114,6 +114,9 @@ class DataReaderRecord:
                 lst_of_questions.append(question)
         return lst_of_questions
 
+    def get_questions(self):
+        return list(self.post_parser.map_questions.values())
+
     def get_html_pages(self, lst_of_questions_id, result_directory):
         """
         :param lst_of_questions_id: list of question to create their html views
