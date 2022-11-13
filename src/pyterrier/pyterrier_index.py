@@ -1,7 +1,10 @@
 import os
+from typing import List
 
 import pyterrier as pt
+from pyterrier.index import IterDictIndexer, IndexRef
 
+from arqmath_code.Entities.Post import Answer
 from arqmath_code.post_reader_record import DataReaderRecord
 from src.pyterrier.pyterrier_math_formula_coding import *
 from src.pyterrier.config import ROOT_DIRECTORY
@@ -22,14 +25,15 @@ def get_arqmath_answers_as_iterable(data_reader: DataReaderRecord):
                    }
 
 
-def create_pyterrier_index(data_reader: DataReaderRecord, index_path: str = f"{ROOT_DIRECTORY}./index/arqmath_indexV1"):
+def create_pyterrier_index(documents: List[Answer], index_name: str = "arqmath_indexV1"):
+    index_path: str = f"{ROOT_DIRECTORY}./index/{index_name}"
     if not os.path.exists(index_path + "/data.properties"):
-        indexer = pt.IterDictIndexer(index_path, overwrite=True)
-        index_reference = indexer.index(get_arqmath_answers_as_iterable(data_reader))
+        indexer: IterDictIndexer = pt.IterDictIndexer(index_path, overwrite=True)
+        index_reference: IndexRef = indexer.index(documents)
         pass
     else:
-        index_reference = pt.IndexRef.of(index_path + "/data.properties")
+        index_reference: IndexRef = pt.IndexRef.of(index_path + "/data.properties")
         pass
 
-    index = pt.IndexFactor(index_reference)
+    index = pt.IndexFactory.of(index_reference)
     return index
