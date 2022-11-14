@@ -35,9 +35,10 @@ def get_pyterrier_query_dict(queries: List[Topic]):
 
 def create_pyterrier_index(documents: List[Answer], index_name: str = "arqmath_indexV1"):
     index_path = f"{ROOT_DIRECTORY}/index/{index_name}"
-    print(index_path)
+
     if not pt.started():
         pt.init()
+
     if not os.path.exists(index_path + "/data.properties"):
         print("PyTerrier index build started")
         indexer = pt.index.IterDictIndexer(index_path)

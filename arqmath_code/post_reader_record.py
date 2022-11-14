@@ -172,10 +172,7 @@ class DataReaderRecord:
         return dic_directories
 
     def get_all_answer_posts(self) -> [Answer]:
-        for answer_id in self.post_parser.map_answers:
-            list_answers = self.post_parser.map_answers[answer_id]
-            for answer in list_answers:
-                yield answer
+        return list(self.post_parser.map_just_answers.values())
 
     def get_tags_for_answer_by_id(self, question_id) -> [list]:
         return self.post_parser.map_questions[question_id].tags
