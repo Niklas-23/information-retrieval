@@ -39,11 +39,14 @@ def create_pyterrier_index(documents: List[Answer], index_name: str = "arqmath_i
     if not pt.started():
         pt.init()
     if not os.path.exists(index_path + "/data.properties"):
+        print("PyTerrier index build started")
         indexer = pt.index.IterDictIndexer(index_path)
         index_reference = indexer.index(get_pyterrier_answer_dict(documents))
+        print("PyTerrier index build finished")
         pass
     else:
         index_reference = pt.IndexRef.of(index_path + "/data.properties")
+        print("Existing PyTerrier index loaded")
         pass
 
     index = pt.IndexFactory.of(index_reference)
