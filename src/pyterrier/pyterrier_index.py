@@ -1,9 +1,11 @@
 import os
 from typing import List
 
+import pandas as pd
 import pyterrier as pt
 
 from arqmath_code.Entities.Post import Answer
+from arqmath_code.topic_file_reader import Topic
 from src.pyterrier.pyterrier_math_formula_coding import *
 from src.pyterrier.config import ROOT_DIRECTORY
 
@@ -21,6 +23,14 @@ def get_pyterrier_answer_dict(documents: List[Answer]):
                    'parentno': answer.parent_id,
                    'votes': answer.votes
                    }
+
+
+def get_pyterrier_query_dict(queries: List[Topic]):
+    query_dict = []
+    for topic in queries:
+        query_dict.append({'qid': topic.topic_id, 'query': translate_latex(topic.question)})
+    queries_data_frame = pd.DataFrame(query_dict)
+    return queries_data_frame
 
 
 def create_pyterrier_index(documents: List[Answer], index_name: str = "arqmath_indexV1"):

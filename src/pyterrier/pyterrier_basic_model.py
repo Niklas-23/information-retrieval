@@ -1,15 +1,12 @@
 from typing import Tuple, Union, List
 
 from pandas import DataFrame
-import pandas as pd
 
 from arqmath_code.Entities.Post import Answer, Question
 from arqmath_code.topic_file_reader import Topic
 from src.base.model import Model
-from src.pyterrier.pyterrier_index import create_pyterrier_index
+from src.pyterrier.pyterrier_index import create_pyterrier_index, get_pyterrier_query_dict
 import pyterrier as pt
-
-from src.pyterrier.pyterrier_math_formula_coding import translate_latex
 
 
 class BasicPyTerrierModel(Model):
@@ -31,7 +28,7 @@ class BasicPyTerrierModel(Model):
         self.pyterrier_index = create_pyterrier_index(documents=documents, index_name="pyterrier_answer_index_task1_v1")
 
         batch_retrieve = pt.BatchRetrieve(self.pyterrier_index, wmodel=self.pyterrier_model)
-        queries_data_frame = self.get_pyterrier_query_dict(queries)
+        queries_data_frame = get_pyterrier_query_dict(queries)
         ranking: DataFrame = batch_retrieve.transform(queries_data_frame)
         documents_to_include = set([answer.post_id for answer in documents])
         result = []
@@ -43,10 +40,3 @@ class BasicPyTerrierModel(Model):
                 result.append((topic, answer, row["score"]))
 
         return result
-
-    def get_pyterrier_query_dict(self, queries: List[Topic]):
-        query_dict = []
-        for topic in queries:
-            query_dict.append({'qid': topic.topic_id, 'query': translate_latex(topic.question)})
-        queries_data_frame = pd.DataFrame(query_dict)
-        return queries_data_frame
