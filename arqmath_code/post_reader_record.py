@@ -41,16 +41,16 @@ class DataReaderRecord:
         self.user_parser = UserParserRecord(users_file_path, badges_file_path)
         self.post_history_parser = None  # post_history_file_path
         print("reading comments")
-        self.comment_parser = CommentParserRecord(comments_file_path)
+        comment_parser = CommentParserRecord(comments_file_path)
         print("reading votes")
-        self.vote_parser = VoteParserRecord(votes_file_path)
+        vote_parser = VoteParserRecord(votes_file_path)
         print("reading post links")
-        self.post_link_parser = PostLinkParserRecord(post_links_file_path)
+        post_link_parser = PostLinkParserRecord(post_links_file_path)
         print("reading posts")
-        self.post_parser = PostParserRecord(post_file_path, self.comment_parser.map_of_comments_for_post,
-                                            self.post_link_parser.map_related_posts,
-                                            self.post_link_parser.map_duplicate_posts,
-                                            self.vote_parser.map_of_votes, self.user_parser.map_of_user,
+        self.post_parser = PostParserRecord(post_file_path, comment_parser.map_of_comments_for_post,
+                                            post_link_parser.map_related_posts,
+                                            post_link_parser.map_duplicate_posts,
+                                            vote_parser.map_of_votes, self.user_parser.map_of_user,
                                             self.post_history_parser)
 
     def get_list_of_questions_posted_in_a_year(self, year):
