@@ -11,8 +11,6 @@ class AnswerScoreRetriever(PostProcessor):
         Tuple[Topic, Union[Question, Answer], float]]:
         ranking = filter(lambda t: t[1].answers is not None, ranking)
         return [
-            (topic, question.accepted_answer_id, score)
-            if question.accepted_answer_id is not None
-            else (topic, question.answers[0].post_id, score)
+            (topic, question.answers[0], score)
             for topic, question, score in ranking
         ]
