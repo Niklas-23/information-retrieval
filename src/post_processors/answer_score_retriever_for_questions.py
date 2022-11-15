@@ -5,7 +5,7 @@ from arqmath_code.topic_file_reader import Topic
 from src.base.post_processor import PostProcessor
 
 
-class AnswerScoreRetriever(PostProcessor):
+class AnswerScoreRetrieverForQuestions(PostProcessor):
 
     def forward(self, queries: List[Topic], ranking: List[Tuple[Topic, Union[Question, Answer], float]]) -> List[
         Tuple[Topic, Union[Question, Answer], float]]:
