@@ -39,7 +39,7 @@ class QuestionSBERT(Model):
     def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[
         Tuple[Topic, Union[Question, Answer], float]]:
         if not os.path.isfile(self.document_path):
-            document_title_embeddings = self.model.encode([document.title for document in documents])
+            document_title_embeddings = self.model.encode([document.title for document in documents], show_progress_bar=True)
             document_index = {documents.index(document): document for document in documents}
             self._save_embeddings(embedding=document_title_embeddings, document_index=document_index)
 
@@ -47,7 +47,7 @@ class QuestionSBERT(Model):
             print("read from cached embeddings at ", self.document_path)
             document_title_embeddings, document_index = self._load_embeddings(documents=documents)
 
-        query_title_embeddings = self.model.encode([query.title for query in queries])
+        query_title_embeddings = self.model.encode([query.title for query in queries], show_progress_bar=True)
         scores: torch.Tensor = cos_sim(query_title_embeddings, document_title_embeddings)  # r[i] -> row of query sims
         res: np.ndarray = np.array(
             [list(zip(
