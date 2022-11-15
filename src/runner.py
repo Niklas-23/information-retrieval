@@ -10,11 +10,14 @@ import pandas as pd
 
 class Runner:
 
-    def __init__(self, pipeline: Callable[[DataReaderRecord], Pipeline], n=1):
-        self.topic_reader, self.data_reader = init_data(task=1)
+    def __init__(self, pipeline: Callable[[DataReaderRecord], Pipeline], n=1, data_reader=None, topic_reader=None):
+        if topic_reader is None or data_reader is None:
+            self.topic_reader, self.data_reader = init_data(task=1)
+        else:
+            self.data_reader = data_reader
+            self.topic_reader = topic_reader
         self.pipeline = pipeline(self.data_reader)
         self.n = n
-
 
     def run(self, path: str) -> pd.DataFrame:
         topics = list(self.topic_reader.map_topics.values())
