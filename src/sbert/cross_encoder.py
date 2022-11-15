@@ -16,6 +16,5 @@ class SBertCrossEncoder(PostProcessor):
         Tuple[Topic, Union[Question, Answer], float]]:
         cross_encoder_in = [[topic.question, answer.body] for topic, answer, _ in ranking]
         scores = self.cross_encoder.predict(cross_encoder_in, show_progress_bar=True)
-        print(scores)
         res_ranking = [(ranking[i][0], ranking[i][1], scores[i]) for i in range(len(ranking))]
         return res_ranking
