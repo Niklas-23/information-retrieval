@@ -1,3 +1,4 @@
+import gc
 import os
 from .Entity_Parser_Record.comment_parser_record import CommentParserRecord
 from .Entity_Parser_Record.post_link_parser_record import PostLinkParserRecord
@@ -35,11 +36,9 @@ class DataReaderRecord:
         votes_file_path = root_file_path + "/Votes"+version+".xml"
         users_file_path = root_file_path + "/Users"+version+".xml"
         post_links_file_path = root_file_path + "/PostLinks"+version+".xml"
-        #post_history_file_path = root_file_path + "/PostHistory.xml"
 
         print("reading users")
-        self.user_parser = UserParserRecord(users_file_path, badges_file_path)
-        self.post_history_parser = None  # post_history_file_path
+        user_parser = UserParserRecord(users_file_path, badges_file_path)
         print("reading comments")
         comment_parser = CommentParserRecord(comments_file_path)
         print("reading votes")
@@ -50,8 +49,12 @@ class DataReaderRecord:
         self.post_parser = PostParserRecord(post_file_path, comment_parser.map_of_comments_for_post,
                                             post_link_parser.map_related_posts,
                                             post_link_parser.map_duplicate_posts,
-                                            vote_parser.map_of_votes, self.user_parser.map_of_user,
-                                            self.post_history_parser)
+                                            vote_parser.map_of_votes, user_parser.map_of_user)
+        del user_parser
+        del comment_parser
+        del vote_parser
+        del post_link_parser
+        gc.collect()
 
     def get_list_of_questions_posted_in_a_year(self, year):
         """
@@ -77,14 +80,6 @@ class DataReaderRecord:
             return None
         return self.post_parser.map_questions[question_id].answers
 
-    def get_user(self, user_id):
-        """
-        :param user_id: the id of user that we want its profile
-        :return: return user profile of user with specif id
-        """
-        if user_id not in self.user_parser.map_of_user:
-            return None
-        return self.user_parser.map_of_user[user_id]
 
     def get_answers_posted_by_user(self, user_id):
         """
