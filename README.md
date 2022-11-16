@@ -9,7 +9,7 @@ To get a better understanding of the tasks and the dataset you can look at the f
 - The README_DATA.md is helpful to get a better understanding of the concrete dataset structure (also see the class
   diagram)
 
-Current state of understanding:
+## Important notes
 
 - We don't need to install the LaTeXML tool since we don't have to preprocess the dataset. The LaTeXML tool is only
   needed to scrape the comments from the MathStackExchange snapshot. Therefore, the only thing you need to install
@@ -18,23 +18,37 @@ Current state of understanding:
   folder (https://drive.google.com/drive/folders/1YekTVvfmYKZ8I5uiUMbs21G2mKwF9IAm). Copy the files to
   the `arqmath_dataset` directory as shown in the screenshot. The concrete directory structure may change in the
   future ![image](example_arqmath_directory.png)
-- In the `understand_the_dataset` jupyter notebook I tried to read and print the dataset. Currently, only the memory
-  address is printed (don't know why, further investigation needed). However, it worked to generate html
-  pages (see html_pages directory). The code used to read the dataset is copied from the ARQMath GitHub
-  repo (https://github.com/ARQMath/ARQMathCode).
-- Code for preprocessing the dataset and creating an index for PyTerrier can be found in
-  this [repo](https://gitlab.com/dprl/pt-arqmath/-/tree/main/).
+- In the `understand_the_dataset` jupyter notebook you can get a better understanding of the ARQMth dataset and you can explore the dataset yourself. The   code used to read the dataset is copied from the ARQMath GitHub repo (https://github.com/ARQMath/ARQMathCode).
+- The code for preprocessing the dataset and creating an index for PyTerrier can be found in
+  this [repo](https://gitlab.com/dprl/pt-arqmath/-/tree/main/). Only the code for translating mathematical symbols into a text representation was copied   and used.
 
-Open questions for the coaching session (feel free to add questions if you have any):
 
-- Can we use libraries that have already implemented concrete functions that are used in information retrieval models (
-  e.g. scikit-learn TfidfVectorizer) or should we implement all of them ourselves?
-- What is about PyTerrier as this is an information retrieval framework and provides a lot of ready-to-use information
-  retrieval models. I think it's still difficult to get everything working due to the complex dataset.
-- Do we need a frontend or cli? I hope not and would prefer to use jupyter notebooks as a kind of frontend to run
-  retrieval models.
-- Do we need to write a project report? If yes, how many pages? What should be the content of the report, should we also
-  explain the models or just evaluate our results?
+## Project requirements
+
+- We can use libraries that have already implemented concrete functions that are used in information retrieval models (
+  e.g. scikit-learn TfidfVectorizer and PyTerrier).
+- Jupyter notebooks are used as a frontend to run the retrieval pipeline. The model implementation itself is in the `src` folder.
+- Still not clear if we need to write a project report.
+- Project presentation on December 7, 2022
+- The overall goal should be to compare different models (old approaches vs new approaches).
+
+## Implemented models, pre-processors and post-processors
+
+### Implemented models
+
+- S-Bert with question title embedding
+- S-Bert cross encoder
+- General PyTerrier model for ad-hoc retrieval. The used retrieval model can be configured via a parameter and all retrival models that are provided by     PyTerrier can be used (e.g. TF, TF-IDF, BM25, Hiemstra-LM). For a complete list of all available models take a look [here](http://terrier.org/docs/current/javadoc/org/terrier/matching/models/package-summary.html). The path to the PyTerrier index must be handled carefully, as  the index will be loaded if an index already exists under the specified path. This is done to improve performance because the index creation is very computationally intensive. In general, an index that contains all ARQMath answers can be used because the model always checks whether the returned results from the Pyterrier index are part of the documents passed to the model.
+
+### Implemented post-processors
+
+- Top-K filer: This filter returns the top k results for each topic. The parameter k ist set to 1000 by default because the ARQMath evaluation expects 1000 results per topic.
+
+- Answer score retriever for questions: For each ranked question the top answer is returned together with the score from the question.
+
+### Runner
+
+The implemented runner executes the passed pipeline and saves the ranking results to a .tsv file. This .tsv file is in the expected format for the ARQMath evaluation scripts.
 
 ## Environment
 
@@ -84,4 +98,4 @@ Pipeline e.g.: PreProcessing -> Model (Binary Tag Retrieval) -> Model (Question 
 
 ## Further Info
 
-For further Information please consult the Jupyter Notebooks in the notebooks folder
+For further Information please consult the Jupyter Notebooks in the notebooks folder. There are several notebooks that that were used to better understan the dataset and the evaluation.
