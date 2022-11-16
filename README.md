@@ -44,6 +44,8 @@ To get a better understanding of the tasks and the dataset you can look at the f
 
 - Top-K filer: This filter returns the top k results for each topic. The parameter k ist set to 1000 by default because the ARQMath evaluation expects 1000 results per topic.
 
+- Answer score retriever for questions: For each ranked question the top answer is returned together with the score from the question.
+
 ### Runner
 
 The implemented runner executes the passed pipeline and saves the ranking results to a .tsv file. This .tsv file is in the expected format for the ARQMath evaluation scripts.
