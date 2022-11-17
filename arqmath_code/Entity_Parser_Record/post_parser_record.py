@@ -7,7 +7,7 @@ class PostParserRecord:
         This class is used for reading the post file. It reads it record by record.
     """
     def __init__(self, xml_post_link_file_path, map_comments=None, map_related_post=None, map_duplicate_post=None,
-                 map_votes=None, map_users=None, post_history_parser=None):
+                 map_votes=None, map_users=None):
         self.map_questions = {}
         self.map_answers = {}
         self.map_just_answers = {}
@@ -54,13 +54,10 @@ class PostParserRecord:
 
             comment_list = None
             vote_list = None
-            edit_list = None
             if map_comments is not None and post_id in map_comments:
                 comment_list = map_comments[post_id]
             if map_votes is not None and post_id in map_votes:
                 vote_list = map_votes[post_id]
-            if post_history_parser is not None and post_id in post_history_parser.map_of_edits:
-                edit_list = post_history_parser.map_of_edits[post_id]
 
             if post_type_id == 1:  # Question
                 title = (attr_dic["Title"])

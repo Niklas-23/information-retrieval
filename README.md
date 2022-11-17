@@ -39,6 +39,7 @@ To get a better understanding of the tasks and the dataset you can look at the f
 - S-Bert with question title embedding
 - S-Bert cross encoder
 - General PyTerrier model for ad-hoc retrieval. The used retrieval model can be configured via a parameter and all retrival models that are provided by     PyTerrier can be used (e.g. TF, TF-IDF, BM25, Hiemstra-LM). For a complete list of all available models take a look [here](http://terrier.org/docs/current/javadoc/org/terrier/matching/models/package-summary.html). The path to the PyTerrier index must be handled carefully, as  the index will be loaded if an index already exists under the specified path. This is done to improve performance because the index creation is very computationally intensive. In general, an index that contains all ARQMath answers can be used because the model always checks whether the returned results from the Pyterrier index are part of the documents passed to the model.
+- Latent Dirichlet Allocation: The number of topics on which the model is trained can be configured via a parameter. Currently there are results for 50 and 200 topics
 
 ### Implemented post-processors
 
