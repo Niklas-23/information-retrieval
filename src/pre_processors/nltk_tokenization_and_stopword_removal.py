@@ -26,6 +26,8 @@ class NLTKTokenizationAndStopwordRemoval(PreProcessor):
     def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[Union[Question, Answer]]:
         for document in documents:
             document.body = tokenize_text(document.body)
+            if isinstance(document, Question):
+                document.title = tokenize_text(document.title)
         return documents
 
 
@@ -33,5 +35,6 @@ class NLTKTokenizationAndStopwordRemovalForQueries(QueryPreProcessor):
 
     def forward(self, queries: List[Topic]) -> List[Topic]:
         for topic in queries:
+            topic.title = tokenize_text(topic.title)
             topic.question = tokenize_text(topic.question)
         return queries
