@@ -15,7 +15,7 @@ stop_word_set = set(stopwords.words('english'))
 
 
 def tokenize_text(text: str) -> str:
-    text_tokens = word_tokenize(text)
+    text_tokens = word_tokenize(text.lower())
     tokens_without_sw = [word for word in text_tokens if not word in stop_word_set]
     filtered_sentence = (" ").join(tokens_without_sw)
     return filtered_sentence
