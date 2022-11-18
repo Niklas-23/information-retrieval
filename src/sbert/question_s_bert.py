@@ -44,10 +44,11 @@ class QuestionSBERT(Model):
             self._save_embeddings(embedding=document_title_embeddings, document_index=document_index)
 
         else:
-            print("read from cached embeddings at ", self.document_path)
             document_title_embeddings, document_index = self._load_embeddings(documents=documents)
+            print("read from cached embeddings at ", self.document_path)
 
         query_title_embeddings = self.model.encode([query.title for query in queries], show_progress_bar=True)
+        print("Calculating Similarities")
         scores: torch.Tensor = cos_sim(query_title_embeddings, document_title_embeddings)  # r[i] -> row of query sims
         res: np.ndarray = np.array(
             [list(zip(
