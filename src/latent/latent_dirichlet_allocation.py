@@ -14,12 +14,13 @@ from src.base.model import Model
 class LatentDirichletAllocationModel(Model):
 
     def __init__(self, lda_n_components=200, lda_random_state=2, lda_n_jobs=-1, vectorizer_max_df=0.90,
-                 vectorizer_min_df=2):
+                 vectorizer_min_df=2, save_embeddings=False):
         self.lda_n_components = lda_n_components
         self.lda_random_state = lda_random_state
         self.lda_n_jobs = lda_n_jobs  # -1 to use all available cpu cores
         self.vectorizer_max_df = vectorizer_max_df
         self.vectorizer_min_df = vectorizer_min_df
+        self.save_embeddings = save_embeddings
         pass
 
     def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[
@@ -43,6 +44,10 @@ class LatentDirichletAllocationModel(Model):
 
         query_topics = lda.transform(query_term_matrix)
         cos_sims: np.ndarray = cosine_similarity(query_topics, document_topics)
+
+        if self.save_embeddings:
+            np.save("lda_embedding_answers", document_topics)
+            np.save("lda_topics_embedding", query_topics)
 
         result = []
         for i, query in enumerate(queries):
