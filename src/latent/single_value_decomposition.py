@@ -13,13 +13,13 @@ from src.base.model import Model
 
 class SingleValueDecompositionModel(Model):
 
-    def __init__(self, svd_n_components=200, svd_random_state=2, svd_n_jobs=-1, vectorizer_max_df=0.90,
-                 vectorizer_min_df=2):
+    def __init__(self, svd_n_components=200, svd_random_state=2, vectorizer_max_df=0.90,
+                 vectorizer_min_df=2, save_embeddings=False):
         self.svd_n_components = svd_n_components
         self.svd_random_state = svd_random_state
-        self.svd_n_jobs = svd_n_jobs  # -1 to use all available cpu cores
         self.vectorizer_max_df = vectorizer_max_df
         self.vectorizer_min_df = vectorizer_min_df
+        self.save_embeddings = save_embeddings
         pass
 
     def forward(self, queries: List[Topic], documents: List[Union[Question, Answer]]) -> List[
@@ -42,6 +42,10 @@ class SingleValueDecompositionModel(Model):
 
         query_topics = svd.transform(query_term_matrix)
         cos_sims: np.ndarray = cosine_similarity(query_topics, document_topics)
+
+        if self.save_embeddings:
+            np.save("svd_embedding_answers", document_topics)
+            np.save("svd_topics_embedding", query_topics)
 
         result = []
         for i, query in enumerate(queries):
