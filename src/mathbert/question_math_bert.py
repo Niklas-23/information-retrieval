@@ -8,6 +8,7 @@ from sentence_transformers.util import cos_sim
 from typing import List, Union, Tuple, Dict
 from arqmath_code.topic_file_reader import Topic
 from arqmath_code.Entities.Post import Question, Answer
+from tqdm import tqdm
 import os
 import json
 
@@ -41,8 +42,8 @@ class QuestionMathBERT(Model):
         Tuple[Topic, Union[Question, Answer], float]]:
         if not os.path.isfile(self.document_path):
 #             document_title_embeddings = self.model.encode([document.title for document in documents], show_progress_bar=True)
-            encoded_inputs = [self.tokenizer(document.title, return_tensors='pt')["input_ids"] for document in documents]
-            document_title_embeddings = np.array([self.model(inp).last_hidden_state[0, 0].detach().numpy() for inp in encoded_inputs])
+            encoded_inputs = [self.tokenizer(document.title, return_tensors='pt')["input_ids"] for document in tqdm(documents, desc="tokenizing docs")]
+            document_title_embeddings = np.array([self.model(inp).last_hidden_state[0, 0].detach().numpy() for inp in tqdm(encoded_inputs, desc="embedding docs")])
             
             document_index = {documents.index(document): document for document in documents}
             self._save_embeddings(embedding=document_title_embeddings, document_index=document_index)
@@ -51,8 +52,8 @@ class QuestionMathBERT(Model):
             document_title_embeddings, document_index = self._load_embeddings(documents=documents)
             print("read from cached embeddings at ", self.document_path)
 
-        encoded_title_inputs = [self.tokenizer(query.title, return_tensors='pt')["input_ids"] for query in queries]
-        query_title_embeddings = np.array([self.model(inp).last_hidden_state[0, 0].detach().numpy() for inp in encoded_title_inputs])
+        encoded_title_inputs = [self.tokenizer(query.title, return_tensors='pt')["input_ids"] for query in tqdm(queries, desc="tokenizing queries")]
+        query_title_embeddings = np.array([self.model(inp).last_hidden_state[0, 0].detach().numpy() for inp in tqdm(encoded_title_inputs, desc="embedding queries")])
 #         query_title_embeddings = self.model.encode([query.title for query in queries], show_progress_bar=True)
         print("Calculating Similarities")
         scores: torch.Tensor = cos_sim(query_title_embeddings, document_title_embeddings)  # r[i] -> row of query sims
